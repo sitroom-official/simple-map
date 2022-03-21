@@ -1,0 +1,26 @@
+{
+  "1": {
+    "userId": "1",
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": 41,
+    "color": "red",
+    "coords": [1.88622, 48.79781]
+  },
+  "2": {
+    "userId": "2",
+    "firstName": "James",
+    "lastName": "Baldwin",
+    "age": 19,
+    "color": "green",
+    "coords": [1.88903, 48.78274]
+  },
+  "3": {
+    "userId": "3",
+    "firstName": "Jack",
+    "lastName": "Donovan",
+    "age": 28,
+    "color": "blue",
+    "coords": [1.90444, 48.79439]
+  }
+}

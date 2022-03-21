@@ -1,0 +1,25 @@
+{
+  "name": "simple-map",
+  "version": "0.0.1",
+  "description": "experiment",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js && node server/api.js",
+    "start-win": "start /B node server/server.js & start /B  node server/api.js",
+    "start-app": "node server/server.js",
+    "start-api": "node server/api.js",
+    "format": "./node_modules/.bin/prettier --write --no-semi --tab-width 4 --single-quote \"{,!(node_modules|deps|public|mobile|docs)/**/}*.js\""
+  },
+  "author": "misterfresh",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "prettier": "^2.5.1"
+  }
+}

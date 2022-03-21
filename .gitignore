@@ -1,0 +1,17 @@
+!.gitignore
+
+# Docker
+/docker-compose.override.yaml
+
+# Env
+/.env
+
+node_modules
+.idea
+.DS_Store
+
+private/*
+!private/.gitkeep
+
+public/uploads/*
+!public/uploads/.gitkeep
