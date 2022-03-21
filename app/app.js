@@ -60,6 +60,9 @@ const App = () => {
             justify-content: center;
             align-items: center;
         }
+        h3 {
+            color: green;
+        }
     </style>
     <div id="simple-ui">
         <h3>Simple UI</h3>
