@@ -7,7 +7,7 @@ export const UserItem = ({user}) => {
             position: relative;
             background: #eee;
             display: block;
-            color: #000;
+            color: #177fbf;
             margin-right: 2rem;
         }
     </style>

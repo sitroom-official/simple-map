@@ -53,6 +53,7 @@ const App = () => {
             z-index: 100;
             pointer-events: auto;
             min-width: 30rem;
+            color:#15a334;
         }
         #users-list {
             display: flex;
@@ -62,7 +63,7 @@ const App = () => {
         }
     </style>
     <div id="simple-ui">
-        <h3>Simple UI</h3>
+        <h3> Simple UI </h3>
         <div id="users-list">
             ${usersList.map( user => html`<${UserItem} user=${user}/>`)}
         </div>
