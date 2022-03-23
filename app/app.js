@@ -36,12 +36,39 @@ const App = () => {
         })
     }
 
-    useEffect( function loadUsers() {
+    useEffect( function loadUsers() { 
         if(!usersList?.[0]?.firstName && !isFetching) {
-            // your code here
+            
+            beforeRequestUser();
 
+            const usersIds = [{userId : 1}, {userId : 2},{userId : 3}];
+
+            async function loopThroughUsersIdsAndFetchUserData(){
+            
+                for(let index = 0; index < usersIds.length; index++) {
+                    const userId=usersIds[index].userId;
+                    try {
+            
+                        const userData = await fetchUserData(userId);
+                        const color=userData.data.color;
+                        const coords=userData.data.coords;
+                        afterReceiveUser(userData);
+                        addMarkerToMap(color, coords);
+            
+                    } catch(error) {
+            
+                        console.log('failed to fetch', userId, error);
+            
+                    }
+                }
+            
+            }
+            
+            loopThroughUsersIdsAndFetchUserData();
+            
         }
-    }, [usersList, isFetching])
+    }, [usersList, isFetching]
+    )
 
     return html`
     <style>
@@ -53,6 +80,7 @@ const App = () => {
             z-index: 100;
             pointer-events: auto;
             min-width: 30rem;
+            color:#15a334;
         }
         #users-list {
             display: flex;
@@ -62,7 +90,7 @@ const App = () => {
         }
     </style>
     <div id="simple-ui">
-        <h3>Simple UI</h3>
+        <h3> Simple UI </h3>
         <div id="users-list">
             ${usersList.map( user => html`<${UserItem} user=${user}/>`)}
         </div>
